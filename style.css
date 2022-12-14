@@ -1,0 +1,61 @@
+/* Inserindo configurações para o body */
+/*body {
+
+}*/
+
+/*Inserindo configurações para a imagem */
+#banner {
+    width: 100%;
+}
+
+/* Criando as características da classe principal */
+.principal{
+    background: #CCCCCC; /*Cor de fundo cinza */
+    padding: 30px; /*Espaçamento interno */
+}
+
+/* Inserindo configurações para titulo-centralizado */
+.titulo-centralizado{
+    text-align: center;
+}
+
+/* Inserindo configurações para a classe titulo-principal */
+.titulo-principal{
+    padding-left: 20px;
+}
+
+/* Inserir configurações para os paragrafos */
+p {
+    text-align:center;
+}
+
+/* Usamos a # por se tratar de um identificador */
+#missao{
+    font-size: 20px;
+}
+
+/* Inserindo a cor específica em todos os lugares no texto que usam strong */
+em strong {
+    color: rgb(236, 58, 14);
+}
+
+/* Configurando as listas. Usamos o ponto por se tratar de uma classe */
+.itens{
+    font-style: italic;
+}
+
+/* */
+.beneficios{
+    background: #FFFFFF;
+}
+
+ul{
+    display: inline-block;
+    vertical-align: top;
+    width: 20%;
+    margin-right: 15%;
+}
+
+.imagem_beneficios{
+    width: 50%;
+}
