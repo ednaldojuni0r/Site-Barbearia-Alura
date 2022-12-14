@@ -1,0 +1,42 @@
+<!DOCTYPE html> <!--DOCTYPE: É uma "informação" para o navegador saber qual tipo de documento deve esperar.-->
+    <html lang="pt-br"> <!--A tag <html> é o contêiner para todos os outros elementos HTML (exceto a tag <!DOCTYPE> ). pt-br, pq é português Brasil-->
+        <head> <!-- é um contêiner para metadados (dados sobre dados) e é colocado entre a tag <html> e a tag <body. Aqui ficam as informações>.-->
+            <meta charset="UTF-8"> <!--define metadados sobre um documento HTML. Metadados são dados (informações) sobre dados.-->
+            <title>Barbearia Alura</title> <!--Define o título do documento - informações-->
+            <link rel="stylesheet" href="style.css" type="text/css"> <!--Definindo o estilo conforme o arquivo style.css-->
+        </head>
+
+        <body> <!--O <body> elemento contém todo o conteúdo de um documento HTML, como títulos, parágrafos, imagens, hiperlinks, tabelas, listas, etc.-->
+
+            <header> <!-- Divisão do Cabeçalho-->
+                <h1 class="titulo-principal" >Barbearia Alura</h1>
+            </header>
+
+            <!--Inserindo a imagem (conteúdo) no body - Como vai no início d página será inserido como primeiro item do body -->
+            <img id="banner" src="banner.jpg">
+
+            <div class="principal">            
+                <h2 class="titulo-centralizado">Sobre a Barbearia Alura</h2>
+
+                    <p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. 
+                    Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</p>
+
+                    <p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</em></p>
+
+                    <p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. 
+                    O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
+            </div>
+
+            <div class="beneficios">
+                <h3 class="titulo-centralizado">Benefícios:</h3>
+                <ul>
+                <li class="itens"> Atendimento aos Clientes;</li>
+                <li class="itens"> Espaço Diferenciado;</li>
+                <li class="itens"> Localização;</li>
+                <li class="itens"> Profissionais Qualificados</li>
+                </ul>
+
+            <img src="beneficios.jpg" class="imagem_beneficios">
+            </div>
+        </body>
+    </html>
