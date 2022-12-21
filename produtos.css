@@ -1,0 +1,93 @@
+header {
+    background: #BBBBBB; /* deixando o fundo do menu cinza */
+    padding: 20px 0; /* espaçamento interno pra cima e pra baixo de 20 px, e 0 para direita e pra esquerda. Colocamos um padding pois queremos que tudo que esteja dentro do cabeçalho esteja dentro dos limites  */
+}
+
+.caixa {
+    position: relative; /* fazendo com que o Menu esteja dentro da "caixa" */
+    width:940px; /* definindo a largura de 940px pois é uma largura padrão que se usa na Web */
+    margin: 0 auto; /* ajuste das margens da esquerda e direita de forma automática. No código ao lado está que a margem pra cima e pra baixo 0, e pra direita e esquerda se calculam automaticamente(auto) */
+}
+
+nav{
+    position: absolute; 
+    top: 110px; /* colocar o menu alinhado horizontalmente */
+    right: 0;
+}
+
+nav li {
+    display: inline; /* colocar o menu alinhado horizontalmente */
+    margin: 0 0 0 15px; /* para separar os nomes do menu, usar o margin na qual colocamos o espaçamento para a esquerda. A ordem é topo, direita, baixo, esquerda */
+}
+
+nav a {
+    text-transform: uppercase; /* transformar o texto todo em maiúsculo */
+    color: #000000; /* transformar a letra em preto */
+    font-weight: bold; /* colocar em negrito a fonte */
+    font-size: 22px; /* tamanho da fonte de 22px */
+    text-decoration: none; /* a tag none diz que no site não queremos nenhum tipo de decoração no meu texto sublinhado*/
+}
+
+nav a:hover { /* o hover chama atenção quando eu estiver passando o mouse */
+    color: #C78C19;
+    text-decoration: underline;
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li { /* classe criada para sair do bloco e ir pro inline organizando todo mundo na mesma linha um do lado do outro*/
+    display: inline-block;
+    text-align: center; /* centralizando o texto e imagem ao centro */
+    width: 30%;  /* cada imagem do conteúdo terá 30% de largura */
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000; /* dashed borda tracejada, dotted borda pontilhada*/ /* border-color, border-width e border-style são os elementos que montam uma borda. Exsiste uma função chamada border na qual consiste no: tamanho da linha, configuração e tipo da linha da borda e cor */
+    border-radius: 10px; /* arrendondando a borda */
+}
+
+.produtos li:hover {
+    border-color: #C78C19;
+}
+
+.produtos li:active { /* função de mudar de cor quando clicar */
+    border-color: #088c19;
+}
+
+.produtos li:hover h2 { /* eu quero que o h2 quando o mouse estiver por cima do li dos produtos, eu mude o tamanho da fonte */
+    font-size: 34px;
+
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold; /* colocando o texto em negrito */
+}
+
+.produto-descricao{
+    font-size: 18px; 
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0 0;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    background: url("bg.jpg"); /* colocando background (bg) como uma imagem e não como uma cor */
+    padding: 40px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0 0;
+}
