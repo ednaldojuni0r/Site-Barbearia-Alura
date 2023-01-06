@@ -1,52 +1,270 @@
 body {
-	
+    font-family: 'Montserrat', sans-serif; /* utilizando uma fonte externa do Google */
 }
 
-#banner {
-	width:100%;
+header {
+    background: #BBBBBB; /* deixando o fundo do menu cinza */
+    padding: 20px 0; /* espaçamento interno pra cima e pra baixo de 20 px, e 0 para direita e pra esquerda. Colocamos um padding pois queremos que tudo que esteja dentro do cabeçalho esteja dentro dos limites  */
 }
 
-.principal{
-	background: #CCCCCC;
-	padding: 30px;
+.caixa {
+    position: relative; /* fazendo com que o Menu esteja dentro da "caixa" */
+    width: 940px; /* definindo a largura de 940px pois é uma largura padrão que se usa na Web */
+    margin: 0 auto; /* ajuste das margens da esquerda e direita de forma automática. No código ao lado está que a margem pra cima e pra baixo 0, e pra direita e esquerda se calculam automaticamente(auto) */
+}
+
+nav {
+    position: absolute; 
+    top: 110px; /* colocar o menu alinhado horizontalmente */
+    right: 0;
+}
+
+nav li {
+    display: inline; /* colocar o menu alinhado horizontalmente */
+    margin: 0 0 0 15px; /* para separar os nomes do menu, usar o margin na qual colocamos o espaçamento para a esquerda. A ordem é topo, direita, baixo, esquerda */
+}
+
+nav a {
+    text-transform: uppercase; /* transformar o texto todo em maiúsculo */
+    color: #000000; /* transformar a letra em preto */
+    font-weight: bold; /* colocar em negrito a fonte */
+    font-size: 22px; /* tamanho da fonte de 22px */
+    text-decoration: none; /* a tag none diz que no site não queremos nenhum tipo de decoração no meu texto sublinhado*/
+}
+
+nav a:hover { /* o hover chama atenção quando eu estiver passando o mouse */
+    color: #C78C19;
+    text-decoration: underline;
+}
+
+.produtos {
+    width: 940px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.produtos li { /* classe criada para sair do bloco e ir pro inline organizando todo mundo na mesma linha um do lado do outro*/
+    display: inline-block;
+    text-align: center; /* centralizando o texto e imagem ao centro */
+    width: 30%;  /* cada imagem do conteúdo terá 30% de largura */
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid #000000; /* dashed borda tracejada, dotted borda pontilhada*/ /* border-color, border-width e border-style são os elementos que montam uma borda. Exsiste uma função chamada border na qual consiste no: tamanho da linha, configuração e tipo da linha da borda e cor */
+    border-radius: 10px; /* arrendondando a borda */
+}
+
+.produtos li:hover {
+    border-color: #C78C19;
+}
+
+.produtos li:active { /* função de mudar de cor quando clicar */
+    border-color: #088c19;
+}
+
+.produtos li:hover h2 { /* eu quero que o h2 quando o mouse estiver por cima do li dos produtos, eu mude o tamanho da fonte */
+    font-size: 34px;
+
+}
+
+.produtos h2 {
+    font-size: 30px;
+    font-weight: bold; /* colocando o texto em negrito */
+}
+
+.produto-descricao{
+    font-size: 18px; 
+}
+
+.produto-preco {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 10px 0 0;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    background: url("bg.jpg"); /* colocando background (bg) como uma imagem e não como uma cor */
+    padding: 40px 0;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 13px;
+    margin: 20px 0 0;
+}
+
+form {
+    margin: 40px 0; /* margem superior de 40px e para os lados 0. Eu quero que tenha um espaço entre o fim do cabeçalho e o início do formulário e o fi do formulário e o início do rodapé*/
+}
+
+form label, form legend { /* inseri a , form p para que a tag form p pegue as características da form label */
+    display:block; /* todos os campos de um formulário são do tipo inline, eles só ocupam o tamnho do seu conteúdo. Para quebrar essa estrutura precisamos que todos os label sejam blocks  */
+    font-size: 20px; /* mudando o tamanho da fonte para 20px */
+    margin:  0 0 10px; /* espaço entre a label e o que vem abaixo dela. Para isso, eu coloco um espaço de 10px */
+}
+
+.input-padrao { /* para replicar a mesma formatação do input para o textarea, é só colocar uma vírgula (,) que o form text area irá pegar as congigurações definidas. Desta forma, minha caixa de texto ficará da memsa largura */
+    display: block; /*Para quebrar essa estrutura precisamos que todos os input sejam blocks  */
+    margin: 0 0 20px; /*margem para baixo de 20px*/
+    padding: 10px 25px; /*mexo no espaçamento interno, no padding para que eu tenha espaço entre a borda e o conteúdo. Nos meus inputs eu vou colocar um padding (espaçamento) de 10px pra cima e para baixo e 25px para os lados */
+    width: 50%; /*definindo a largura como 50% da página*/
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+/*sempre que estivermos criando CSS, a tag (p, por exemplo) tem força 1, 
+a class (.nomedaclasse) força 10 e o 
+id (#teste) força 100 e o 
+estilo inline no HTML, tem força 1000, ou seja, muito forte*/
+
+.enviar {
+   width: 40%; 
+    padding: 15px 0;
+    background: orange ;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    transition: 1s all; /*colocando 1 s de transição em todas as linhas que precisam de transição*/
+    cursor: pointer; /*trocando a seta por uma mãozinha para o usuário entender que a caixa é clicável*/
+}
+
+.enviar:hover {
+    background: darkorange;
+    transform: scale(1.2); /* o transform scale faz uma transição de aumento de 20%*/
+}
+
+table {
+    margin: 20px 0 40px;
+}
+
+thead {
+    background: #555555;
+    color: white;
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid #000000;
+    padding: 8px 14px;
+}
+
+/* css da página inicial */
+.banner {
+    width: 100%;
 }
 
 .titulo-principal {
-	padding-left: 20px;
+    text-align: center;
+    font-size: 2em; /* 2 vezes o tamanho base (15px), logo meu tamanho será 30px */
+    margin: 0 0 1em;
+    clear: left; /* foi utilizado o clear para limpar o efeito do float na classe .utensilios pois o float afeta toda a página abaixo do uso do float*/
 }
 
-.titulo-centralizado {
-	text-align: center
+.principal {
+    padding: 3em 0;
+    background: #FEFEFE;
+    width: 940px; /* 940px de largura */
+    margin: 0 auto; /* margem 0, auto */
 }
 
-p {
-	text-align: center;
+.principal p {
+    margin: 0 0 1em;
 }
 
-#missao {
-	font-size: 20px
+.principal strong {
+    font-weight: bold;
 }
 
-em strong {
-	color: #FF0000;
+.principal em {
+    font-style: italic;
 }
 
-.itens {
-	font-style: italic
+.utensilios {
+    width: 120px;
+    float: left; /* o float é utilizado para descolar o elemento na lateral e deixar os outros elementos ao redor. Tanto o float:left quanto o float: right servem para que o elemento se destaque na tela, deixe de ocupar o espaço em que estava, para que os outros elementos possam se posicionar ao redor dele*/
+    margin: 0 20px 20px 0; /* cima, direita, baixo, esquerda*/
+}
+
+.mapa{
+    padding: 3em 0; /* 3 em pra cima e pra baixo e 0 para as laterais*/
+    background: linear-gradient(#FEFEFE, #888888);
+}
+
+.mapa-conteudo {
+    width: 940px; /* 940px de largura */
+    margin: 0 auto; /* margem 0, auto */
+}
+
+.mapa p {
+    margin: 0 0 2em; /* espaçamento externo, a margem para baixo de 2em*/
+    text-align: center;
 }
 
 .beneficios {
-	background: #FFFFFF;
-	padding: 20px;
+    padding: 3em 0;
+    background: #888888;
 }
 
-ul {
-	display: inline-block;
-	vertical-align: top;
-	width: 20%;
-	margin-right: 15%;
+.conteudo-beneficios {
+    width: 640px;
+    margin: 0 auto;
 }
 
-.imagembeneficios {
-	width: 50%;
+.lista-beneficios {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5;
+}
+
+.itens:first-child { /* colocando o primeiro item em negrito. Existe o las-child e o nth-child(4) quando pega o 4º elemento da lista*/
+    font-weight: bold;
+}
+
+.itens:before {
+    content: "★";
+
+}
+
+.imagem-beneficios {
+    width: 60%;
+    opacity: 1; /* através da tag opacity, conseguimos colocar as imagens mais claras visualmente. NEsse caso eu vejo 100% */
+    transition: 400ms;
+    box-shadow: 10px 10px 10px 0 #000000; /* colocando sombra na imagem (Eixo X, eixo Y, transição */
+}
+
+.imagem-beneficios:hover {
+    opacity: 0.3; /* através da tag opacity, conseguimos colocar as imagens mais claras visualmente. Nesse caso, vejo 30% */
+}
+
+.video {
+    width: 560px;
+    margin: 2em auto;
+}
+
+@media screen and (max-width: 480px) { /*Para marcar um elemento para que ele seja apresentado de outra forma, em uma tela de até 480px, colocar a tag ao lado*/
+    .caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video {
+        width: auto;
+    }
+    h1 {
+        text-align: center;
+    }
+
+    nav {
+        position: static;
+    }
+
+.lista-beneficios, .imagem-beneficios {
+    width: 100%;
+}
 }

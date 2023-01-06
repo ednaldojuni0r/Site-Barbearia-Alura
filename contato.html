@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Contato - Barbearia Alura</title> <!-- Nome da minha aba do navegador -->
+        <link rel="stylesheet" href="reset.css"> <!-- colocar o reset.css para limpar o navegador antes de tudo que fizermos -->
+        <link rel="stylesheet" href="style.css"> <!-- fazendo referência ao meu arquivo css produtos.css -->
+    </head>
+    <body>
+        <header> <!-- criando um cabeçalho -->
+            <div class="caixa"> <!-- fou utilizada o cálculo da margem automática (auto) para alinhar uma tag <div> para centralizar os elemntos -->
+                <h1><img src="logo.png" alt="Logo da Barbearia Alura"></h1> <!-- inserindo imagem como conteúdo principal do título --> <!-- toda imagem do meu site precisa ter a tag alt que é uma tag de acessibilidade -->
+            
+                <nav> <!-- criando menu de navegação com links entre páginas -->
+                    <ul>
+                        <li><a href="index.html">Home</a></li> <!-- A <a>tag define um hiperlink, que é usado para vincular de uma página a outra. O atributo mais importante do <a>elemento é o hrefatributo, que indica o destino do link. -->
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+        </div>
+        </header>
+
+        <main> <!-- conteúdo principal -->
+            <form>
+                    <label for="nomesobrenome">Nome e sobrenome</label> <!-- adicionando campos para o formulário sempre usar etiqueta para um input (label). Eu tenho um label e um input. O meu for sempre tem que ser o mesmo que o id (identificador)  -->
+                    <input type="text" id="nomesobrenome" class="input-padrao" required> <!-- o required é usado para que coloque um campo como obrigatório -->
+
+                    <label for="email">Email</label> <!-- adicionando campos para o formulário sempre usar etiqueta para um input (label). Eu tenho um label e um input. O meu for sempre tem que ser o mesmo que o id (identificador)  -->
+                    <input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com"> <!-- Foi utilizado o input email vide http://mobileinputtypes.com/ --> <!-- o required é usado para que coloque um campo como obrigatório e o placeholder foi utilizado para inserir um texto de ajuda para o usuário no qual ao escrever ele some -->
+
+                    <label for="telefone">Telefone</label> <!-- adicionando campos para o formulário sempre usar etiqueta para um input (label). Eu tenho um label e um input. O meu for sempre tem que ser o mesmo que o id (identificador)  -->
+                    <input type="tel" id="telefone" class="input-padrao" required placeholder="(XX) XXXXX-XXXX"> <!-- Foi utilizado o input tel vide http://mobileinputtypes.com/ --> <!-- o required é usado para que coloque um campo como obrigatório e o placeholder foi utilizado para inserir um texto de ajuda para o usuário no qual ao escrever ele some -->
+
+                    <label for="mensagem">Mensagem</label> <!-- inserindo o campo mensagem -->
+                    <textarea cols="70" rows="10" id="mensagem" class="input-padrao" required></textarea> <!-- inserindo o campo mensagem -->
+                    
+                    <fieldset> <!-- ao invÊs de dividir com a tag div, utiliza-se a tag fieldset -->
+                        <legend>Como prefere o nosso contato?</legend> <!-- a tag legend funciona como um parágrafo mas específico para uma divisão -->
+                        <label for="radio-email"><input type="radio" name="contato" value="email" id="radio-email"> Email</label> <!-- ainda adicionando as opções para o formulário --> <!-- a tag name="contato" é um grupo criado para que na hora que eu selecione uma opção, ele selecione apena um item e não vários -->
+                        
+                        <label for="radio-telefone"><input type="radio" name="contato" value="telefone" id="radio-telefone"> Telefone</label> <!-- ainda adicionando as opções para o formulário --> <!-- a tag name="contato" é um grupo criado para que na hora que eu selecione uma opção, ele selecione apena um item e não vários -->
+                        
+                        <label for="radio-whatsapp"><input type="radio" name="contato" value="whatsapp" id="radio-whatsapp" checked> Whatsapp</label> <!-- ainda adicionando as opções para o formulário --> <!-- a tag name="contato" é um grupo criado para que na hora que eu selecione uma opção, ele selecione apena um item e não vários --> <!-- O checked foi usado para selelcionar um item previamente, para que melhore a usabilidade -->
+                        
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Qual horário prefere ser atendido?</legend>
+                        <select>
+                            <option>Manhã</option>
+                            <option>Tarde</option>
+                            <option>Noite</option>
+                        </select>
+                    </fieldset>
+
+                    <label class="checkbox"><input type="checkbox" checked>Gostaria de receber nossas novidades por email?</label> <!--elementos do tipo checkbox são renderizados por padrão como caixas quadradas que são marcadas (com uma marca de verificação) quando ativadas --> <!-- O checked foi usado para selelcionar um item previamente, para que melhore a usabilidade -->
+
+                    <input type="submit" value="Enviar formulário" class="enviar"> <!-- criação do botão "enviar formuçário" -->
+                </form>
+
+                <table> <!-- tb = table row (linha da tabela) e td seria a coluna da minha tabela-->
+                    <thead> <!-- cabeçalho de uma tabela-->
+                        <tr>
+                            <th>Dia</th> <!-- usamos <th> pois é uma célula do cabeçalho -->
+                            <th>Horário</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Segunda</td>
+                            <td>8h ~20h</td>
+                        </tr>
+                        <tr>
+                            <td>Quarta</td>
+                            <td>8h ~20h</td>
+                        </tr>
+                        <tr>
+                            <td>Sexta</td>
+                            <td>8h ~20h</td>
+                        </tr>
+                    </tbody>
+                </table>
+        </main>
+
+        <footer> <!-- trabalhando no rodapé da página -->
+            <img src="logo-branco.png" alt="Logo da Barbearia Alura"> <!-- toda imagem do meu site precisa ter a tag alt que é uma tag de acessibilidade -->
+            <p class="copyright">&copy; Copyright Barbearia Alura - 2019</p> <!-- usando o &copy para colocar o c de direitos autorais vide site https://unicode-table.com/pt/00A9/ -->
+
+        </footer>
+      
+
+    
+    </body>
+</html>

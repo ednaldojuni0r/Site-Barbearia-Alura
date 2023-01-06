@@ -2,36 +2,82 @@
 <html lang="pt-br">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width"> <!-- para deixar o site responsivo para telefones, utilizar essa tag -->
 		<title>Barbearia Alura</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="reset.css"> 
+        <link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> <!-- utilizando uma fonte externa do Google -->
 	</head>
 
 	<body>
-		<header>
-			<h1 class="titulo-principal">Barbearia Alura</h1>
-		</header>
-		<img id="banner" src="banner.jpg">
-		<div class="principal">
-			<h2 class="titulo-centralizado">Sobre a Barbearia Alura</h2>
-	 
-			<p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</p>
+		<header> <!-- criando um cabeçalho -->
+            <div class="caixa"> <!-- fou utilizada o cálculo da margem automática (auto) para alinhar uma tag <div> para centralizar os elemntos -->
+                <h1><img src="logo.png"></h1> <!-- inserindo imagem como conteúdo principal do título -->
+            
+                <nav> <!-- criando menu de navegação com links entre páginas -->
+                    <ul>
+                        <li><a href="index.html">Home</a></li> <!-- A <a>tag define um hiperlink, que é usado para vincular de uma página a outra. O atributo mais importante do <a>elemento é o hrefatributo, que indica o destino do link. -->
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+        </div>
+        </header>>
+		
+		<img class="banner" src="banner.jpg"> <!-- no CSS sempre quando queremos falar de estilo, usamos uma classe (class). Sempre que queremos falar de comportamento usamos um identificador (id) -->
 
-			<p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</em></p>
+		<main>
+			<section class="principal"> <!-- A tag <div> é uma divisão visual enquanto a <section> é uma divisão onde existe um coneúdo complexo-->
+				<h2 class="titulo-principal">Sobre a Barbearia Alura</h2>
 
-			<p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
-		</div>
+				<img class="utensilios" src="utensilios.jpg" alt="Utensilios de um barbeiro.">
+		
+				<p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</p>
 
-		<div class="beneficios">
-			<h3 class="titulo-centralizado">Benefícios</h3>
+				<p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</em></p>
 
-			<ul>
-				<li class="itens">Atendimento aos Clientes</li>
-				<li class="itens">Espaço diferenciado</li>
-				<li class="itens">Localização</li>
-				<li class="itens">Profissionais Qualificados</li>
-			</ul>
+				<p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
+			</section>
 
-			<img src="beneficios.jpg" class="imagembeneficios">
-		</div>
+			<section class="mapa">
+				<h3 class="titulo-principal">Nosso estabelecimento</h3>
+				<p> Nosso estabelecimento está localizado no coração da cidade.</p>
+
+				<div class="mapa-conteudo">
+
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.449977466565!2d-46.634520585867115!3d-23.588189868466763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b2ed7f3a1%3A0xab35da2f5ca62674!2sAlura%20-%20Escola%20Online%20de%20Tecnologia!5e0!3m2!1spt-BR!2sbr!4v1672186240883!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</section>
+
+
+			<section class="beneficios">
+					<h3 class="titulo-principal">Benefícios</h3>
+
+						<div class="conteudo-beneficios">
+
+							<ul class="lista-beneficios">
+							<li class="itens">Atendimento aos Clientes</li>
+							<li class="itens">Espaço diferenciado</li>
+							<li class="itens">Localização</li>
+							<li class="itens">Profissionais Qualificados</li>
+							<li class="itens">Pontualidade</li>
+							<li class="itens">Limpeza</li>
+							</ul><img src="beneficios.jpg" class="imagem-beneficios"> <!-- colocando um elemnto do lado do outro -->
+					</div>
+					
+					<div class="video">
+						<iframe width="100%" height="315" src="https://www.youtube.com/embed/wcVVXUV0YUY" 
+						title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+						clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+						</iframe>
+					</div>
+				</section>
+		</main>
+
+		<footer> <!-- trabalhando no rodapé da página -->
+            <img src="logo-branco.png">
+            <p class="copyright">&copy; Copyright Barbearia Alura - 2019</p> <!-- usando o &copy para colocar o c de direitos autorais vide site https://unicode-table.com/pt/00A9/ -->
+
+        </footer>
 	</body>
 </html>
